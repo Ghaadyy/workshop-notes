@@ -1,7 +1,8 @@
 package com.example.workshopnotes
 
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
-import retrofit2.await
 import retrofit2.converter.gson.GsonConverterFactory
 
 class NotesRetrofitRepository(private val baseUrl: String) : NotesRepository {
@@ -17,14 +18,14 @@ class NotesRetrofitRepository(private val baseUrl: String) : NotesRepository {
         TODO("Not yet implemented")
     }
 
-    override suspend fun getNotes(): List<Note> {
+    override suspend fun getNotes(): List<Note> = withContext(Dispatchers.IO) {
         val retrofit: Retrofit = Retrofit.Builder()
-            .baseUrl(baseUrl) // Replace with your actual URL
+            .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
         val mockService = retrofit.create(MockService::class.java)
 
-        return mockService.getNotes().await()
+        mockService.getNotes()
     }
 }
