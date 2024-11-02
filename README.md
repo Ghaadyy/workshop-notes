@@ -26,4 +26,4 @@ Created a RecyclerView with some buttons to request data from the different sour
 
 # Screenshots
 
-![Image showcasing the application.](assets/page.png)
+<img src="assets/page.png" width="500" height="auto" alt="Image showcasing the application">
