@@ -9,7 +9,7 @@ import java.io.InputStreamReader
 import java.net.*
 import javax.net.ssl.HttpsURLConnection
 
-class NotesHttpConnection(private val baseUrl: String) : NotesRepository {
+class NotesHttpRepository(private val baseUrl: String) : NotesRepository {
     private val gson = Gson()
 
     override suspend fun createNote(note: Note) {

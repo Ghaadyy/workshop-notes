@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.http_btn).setOnClickListener {
-            repo = NotesHttpConnection(baseUrl)
+            repo = NotesHttpRepository(baseUrl)
             scope.launch { loadFromRepository() }
         }
         findViewById<Button>(R.id.retrofit_btn).setOnClickListener {
