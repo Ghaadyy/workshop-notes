@@ -22,8 +22,8 @@ To make it easier for interchanging the data source, I implemented a `NotesRepos
 
 ## Step 5: Basic Activity to Experiment
 
-Created a RecyclerView with some buttons to request data from the different sources: RoomDB, network with `Retrofit` and `HttpURLConnection.
+Created a RecyclerView with some buttons to request data from the different sources: RoomDB, network with `Retrofit` and `HttpURLConnection`.
 
 # Screenshots
 
-<img src="assets/page.png" width="500" height="auto" alt="Image showcasing the application">
+<img src="assets/page.png" width="400" height="auto" alt="Image showcasing the application">
